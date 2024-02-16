@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <script src="mscript.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="resultC"></div>
+    <div id="loginC">
+        <h2 class="title">Login to your account..</h2>
+    <form>
+      
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <span id="usernameError" class="error"></span>
+
+       <br>
+
+      <div id="pass">
+        <label for="username">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <img src="closed-eye.png" id="eye" onclick="showPassword()"></img>
+      </div><br>
+      
+      <a onclick="login(event)" class="reg">Login</a> 
+      <a onclick="goToReg()" class="reg" >Register new</a>
+      
+
+    </form>     
+
+    </div>
+</body>
+</html>

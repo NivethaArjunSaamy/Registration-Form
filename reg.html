@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title> 
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="script.js" defer></script>
+
+</head>
+<body>
+<section id="searchbar">
+<input type="text" id="searchInput" oninput="search()" placeholder="Search here..." />
+<span id="searchError" class="searchBoxError"></span>
+<div id="resultC"></div>
+</section>
+<div id="formC">
+<h2 class="title">Registration Form</h2>
+<form id="registrationForm">
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required>
+<span id="nameError" class="error"></span>
+<br>
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+<span id="emailError" class="error"></span>
+
+<br>
+
+<label for="phone">Phone:</label> 
+<input type="tel" id="phone" name="phone" required>
+<span id="phoneError" class="error"></span>
+
+<br>
+<label for="dob">Date of Birth:</label>
+<input type="date" id="dob" name="dob" required>
+<span id="dobError" class="error"></span>
+
+<br>
+
+<label>Gender:</label>
+<select id="gender" required>
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+<option value="Other">Other</option>
+</select>
+
+<br><br>
+
+<label for="occupation">Occupation:</label>
+<input type="text" id="occupation" name="occupation" placeholder="optional">
+
+<br>
+
+<label for="education">Education:</label>
+<select id="education">
+<option value="B.E">B.E</option>
+<option value="B.Tech">B.Tech</option>
+<option value="M.E">M.E</option>
+<option value="B.Com">B.Com</option>
+<option value="B.Ed">B.Ed</option>
+<option value="Other">Other</option>
+</select>
+
+<br><br>
+<label for="username">Username:</label>
+<input type="text" id="username" name="username" required>
+<span id="usernameError" class="error"></span>
+
+<br>
+
+<label for="password">Password:</label>
+<div id="pass">
+<input type="password" id="password" name="password" required>
+<img src="hide.png" id="eye" onclick="showPassword()"></img>
+</div>
+<span id="passwordError" class="error"></span>
+
+<br>
+
+<label for="pan">PAN:</label>
+<input type="text" id="pan" name="pan" required>
+<span id="panError" class="error"></span>
+
+<br>
+
+<label for="photo">Photo:</label>
+<input type="file" id="photo" name="photo" accept="image/png, image/jpeg" required>
+<span id="photoError" class="error"></span>
+
+<br>
+
+<button type="submit" id="submit" onclick="register(event)">Register</button>
+</form> 
+</div>
+<audio id="errorSound" src="errorSound.mp3"></audio>
+</body>
+</html>
